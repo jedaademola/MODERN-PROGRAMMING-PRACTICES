@@ -5,7 +5,7 @@ import java.util.List;
 public class ReleaseBackLog {
 	
 	private List<Features> featureId;
-	private List<Release> releaseId;
+	private long releaseId;
 	private String description;
 	
 	public void addTo()

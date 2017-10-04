@@ -4,7 +4,7 @@ import java.util.List;
 
 public class BackLog {
 	
-	private Long id;
+	private long id;
 	private List<Features> features;
 	
 

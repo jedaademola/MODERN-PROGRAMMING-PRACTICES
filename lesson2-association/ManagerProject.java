@@ -2,9 +2,9 @@ package com.mpp.lesson1;
 
 public class ManagerProject {
 	
-	private Long projectId;
-	private Long managerId;
-	private Long backLogId;
+	private long projectId;
+	private long managerId;
+	private long backLogId;
 	
 	public void add()
 	{
@@ -17,7 +17,12 @@ public class ManagerProject {
 		
 	}
 
-	public void contain()
+	public void contains()
+	{
+		
+	}
+	
+	public void report()
 	{
 		
 	}
