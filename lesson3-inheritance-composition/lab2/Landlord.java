@@ -1,4 +1,4 @@
-package edu.mm.lesson3;
+package lab2;
 
 import java.util.List;
 
@@ -23,5 +23,18 @@ public class Landlord {
 		return building;
 	}
 	
+	
+	public double monthlyProfit()
+	{
+		double totalProfit=0.0;
+		
+		if (building != null)
+		{
+			for (Building b: getBuilding())
+				totalProfit+= b.profit();
+		}
+		
+		return totalProfit;
+	}
 	
 }

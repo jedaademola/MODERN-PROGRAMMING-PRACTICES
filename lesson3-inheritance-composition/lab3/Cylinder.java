@@ -1,6 +1,11 @@
-package edu.mm.lesson3;
+package lab3;
 
 public class Cylinder extends Circle{
+
+	@Override
+	public String toString() {
+		return "Cylinder [height=" + height + "]";
+	}
 
 	private double height;
 	

@@ -1,4 +1,4 @@
-package edu.mm.lesson3;
+package lab2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,15 +18,17 @@ public class MainClass {
 		
 		Building building1 = new Building(1,"Des Moines",200,appList);
 		
-		
+		//ANOTHER SET OF APARTMENTS
 		Apartment app4 = new Apartment(1,10);
 		Apartment app5 = new Apartment(2,15);
 		Apartment app6 = new Apartment(3,20);
+		
 		List<Apartment> appList2 = new ArrayList<>();
 		appList2.add(app4);
 		appList2.add(app5);
 		appList2.add(app6);
 		
+		//ANOTHER BUILDING
 		Building building2 = new Building(2,"Fairfield",10,appList2);
 		
 		
@@ -37,11 +39,11 @@ public class MainClass {
 		Landlord landlord = new Landlord("Bob","123-678",buildingList);
 		System.out.println(landlord);
 		
-		double totalProfit=0.0;
-		for (Building b: landlord.getBuilding())
-			totalProfit+= b.profit();
+		//double totalProfit=0.0;
+		//for (Building b: landlord.getBuilding())
+		//	totalProfit+= b.profit();
 			
-		System.out.println("Landlord’s monthly total profits:" + totalProfit);
+		System.out.println("Landlord’s monthly total profits:" + landlord.monthlyProfit());
 		
 		
 	}

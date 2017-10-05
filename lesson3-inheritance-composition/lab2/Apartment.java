@@ -1,4 +1,4 @@
-package edu.mm.lesson3;
+package lab2;
 
 public class Apartment {
 	
