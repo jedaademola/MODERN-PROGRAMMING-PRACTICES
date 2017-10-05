@@ -28,7 +28,7 @@ public class Landlord {
 	{
 		double totalProfit=0.0;
 		
-		if (building != null)
+		if (getBuilding() != null)
 		{
 			for (Building b: getBuilding())
 				totalProfit+= b.profit();
