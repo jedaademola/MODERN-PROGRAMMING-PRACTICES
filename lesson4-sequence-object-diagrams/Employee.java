@@ -7,7 +7,7 @@ public abstract class Employee
 	public void print()
 	{
 		//TEST
-		System.out.println("Employee [empId=" + empId +  " " + calcCompensation(10) + "]");
+		System.out.println("Employee [empId=" + empId +  " " + calcCompensation(10,2017) + "]");
 	}
 	
 	
@@ -17,12 +17,12 @@ public abstract class Employee
 		this.empId=empId;
 	}
 	
-	public Paycheck calcCompensation(int month)
+	public Paycheck calcCompensation(int month, int year)
 	{
-		Paycheck result = new Paycheck(calcGrossPay());
+		Paycheck result = new Paycheck(calcGrossPay(month,year));
 		return result;
 	}
 	
-	public abstract double calcGrossPay();
+	public abstract double calcGrossPay(int month, int year);
 	
 }

@@ -15,16 +15,16 @@ public class MainClass {
 		employee[1]=comissioedEmployee;
 		employee[2]=salaryEmployee;
 		
-		printSalary(employee, 10);
+		printSalary(employee,10,2017);
 		
 
 	}
 	
-	public static void printSalary(Employee [] employee,int month )
+	public static void printSalary(Employee [] employee,int month,int year )
 	{
 		for(Employee e: employee)
 		{
-			System.out.println(e.calcCompensation(month));
+			System.out.println(e.calcCompensation(month,year));
 			e.print();
 			System.out.println();
 		}

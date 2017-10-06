@@ -31,7 +31,7 @@ public final class Paycheck
 	@Override
 	public String toString() {
 		return "Paycheck [GrossPay=" + grossPay + ", FICA=" + fica + ", State tax=" + state + ", Local tax=" + local
-				+ ", Medicare=" + medicare + ", Social Security=" + socialSecurity + ", NetPay1=" +  getNetPay() + "]";
+				+ ", Medicare=" + medicare + ", Social Security=" + socialSecurity + ", NetPay=" +  getNetPay() + "]";
 	}
 
 	

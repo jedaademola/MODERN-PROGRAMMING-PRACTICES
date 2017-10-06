@@ -21,13 +21,13 @@ public class Commissioned extends Employee
 		
 	}
 	
-	private List<Order> orderList()
+	private List<Order> orderList(int month, int year)
 	{
 		List<Order> list = new ArrayList<>();
 		
 		for(int k =1 ; k<6 ;++k)
 		{
-			Order ord = new Order(k,LocalDate.of(2017, 1, 1), k * 50.0);
+			Order ord = new Order(k,LocalDate.of(year, month, k), k * 50.0);
 			
 			list.add(ord);
 			
@@ -37,20 +37,31 @@ public class Commissioned extends Employee
 		return list;
 		
 	}
-	private double getTotal()
+	private double getTotal(int month, int year)
 	{
 		double totalOrder =0.0;
-		if (orderList() != null)
-			for(Order o: orderList())
-			 totalOrder +=o.getOrderAmount();
+		
+		List<Order> list = orderList( month,  year);
+		
+		if ( list != null)
+			for(Order o: list)
+			{
+				//System.out.println((o.getOrderDate().getMonthValue()));
+				//System.out.println((o.getOrderDate().getYear()));
+				//System.out.println((o.getOrderDate().getMonth()));
+				//System.out.println(month);
+				
+				if (o.getOrderDate().getMonthValue() == month && o.getOrderDate().getYear() == year)
+					totalOrder +=o.getOrderAmount();
+			}
 		
 		return totalOrder;
 	}
 	
 	@Override
-	public double calcGrossPay() {
+	public double calcGrossPay(int month, int year) {
 
-		return (getTotal() * commission) + baseSalary;
+		return (getTotal(month,year) * commission) + baseSalary;
 	}
 	
 }
