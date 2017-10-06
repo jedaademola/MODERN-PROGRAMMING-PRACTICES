@@ -46,6 +46,8 @@ public class PersonWithJob {
 	public static void main(String[] args) {
 		//EXPLANATION
 		/*
+		 	The inheritance solution, the equals method compare different objects
+		 	(Person with name attribute and PeesonWithJob with name and salary attribute)
 		 	
 		*/
 	
