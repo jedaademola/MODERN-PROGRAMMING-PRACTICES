@@ -2,8 +2,8 @@ package edu.mum.mpp.lesson5;
 
 public final class Rectangle implements Figure{
 	
-	private final double width;
-	private final double length;
+	private double width;
+	private double length;
 	
 	//width * length
 	
