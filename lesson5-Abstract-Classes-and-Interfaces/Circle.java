@@ -4,7 +4,7 @@ public final class Circle implements Figure{
 	
 	
 	//PI * radius * radius
-	private double radius;
+	private final double radius;
 	
 
 	

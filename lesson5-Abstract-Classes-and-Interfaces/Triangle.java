@@ -6,8 +6,8 @@ public final class Triangle implements Figure{
 	
 	//1/2 * base * height
 	
-	private double base;
-	private double height;
+	private final double base;
+	private final double height;
 	
 	
 	public Triangle(double _base, double _height)
