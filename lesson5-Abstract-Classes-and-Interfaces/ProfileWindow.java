@@ -13,6 +13,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -142,10 +143,25 @@ public class ProfileWindow extends JFrame {
 			String city = lastName.getText();
 			String state = favoriteMovieField.getText();
 			String zip = favoriteRestaurantField.getText();
-			String n = System.getProperty("line.separator");
-			String output = name + n + street + n + city + ", "+state+" "+zip;
-			System.out.println(output);
-			clearFields();
+			
+
+			try
+			{
+				RuleSetFactory.getRuleSet(ProfileWindow.this).applyRules(ProfileWindow.this);
+				
+				String n = System.getProperty("line.separator");
+				String output = name + n + street + n + city + ", "+state+" "+zip;
+				System.out.println(output);
+				clearFields();
+				
+			}
+			catch(RuleException e) {
+				JOptionPane.showMessageDialog(ProfileWindow.this,                                                    
+                        "Error: "+e.getMessage(),
+                        "Error", 
+                        JOptionPane.ERROR_MESSAGE);
+
+			}
 			
 		}
 	}
