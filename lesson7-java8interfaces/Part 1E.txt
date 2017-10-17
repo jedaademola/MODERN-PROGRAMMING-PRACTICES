@@ -1,0 +1,4 @@
+1 A.
+Interfaced: Serializable, Cloneable, Iterable<E>, Collection<E>, List<E>, RandomAccess and extends AbstractList.
+
+
